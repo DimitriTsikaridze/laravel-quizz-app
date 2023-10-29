@@ -1,0 +1,36 @@
+.question {
+  border: 1px solid dodgerblue;
+  border-radius: 4px;
+  padding: 10px;
+  margin-block: 1rem;
+}
+
+.question.answered {
+  color: greenyellow;
+}
+
+.question {
+  color: brown;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid steelblue;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: steelblue;
+  margin-top: 15px;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+input:focus {
+  box-shadow: 0 0 8px 2px steelblue;
+}
+
+form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
