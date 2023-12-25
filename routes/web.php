@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuizController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,8 @@ Route::get('/quiz', function () {
     ];
     return view('quiz', compact('quiz'));
 });
+
+
+Route::get('/quiz/create', [QuizController::class, 'create'])->name('quiz.create');
+Route::get('/quiz/{id}/edit', [QuizController::class, 'edit'])->name('quiz.edit');
+Route::post('/quiz/{id?}', [QuizController::class, 'storeOrUpdate'])->name('quiz.storeOrUpdate');
